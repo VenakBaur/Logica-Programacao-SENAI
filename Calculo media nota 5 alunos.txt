@@ -1,0 +1,117 @@
+programa
+{
+	
+	funcao inicio()
+	{
+		cadeia aluno1, aluno2, aluno3, aluno4, aluno5
+		real aluno1n1, aluno1n2, aluno1n3, aluno1n4, aluno1n5
+		real aluno2n1, aluno2n2, aluno2n3, aluno2n4, aluno2n5
+		real aluno3n1, aluno3n2, aluno3n3, aluno3n4, aluno3n5
+		real aluno4n1, aluno4n2, aluno4n3, aluno4n4, aluno4n5
+		real aluno5n1, aluno5n2, aluno5n3, aluno5n4, aluno5n5
+		real media1, media2, media3, media4, media5
+
+		escreva("Qual o nome do primeiro aluno? ")
+		leia(aluno1)
+		escreva("Qual o nome da sua primeira nota? ")
+		leia(aluno1n1)
+		escreva("Qual o nome da sua segunda nota? ")
+		leia(aluno1n2)
+		escreva("Qual o nome da sua terceira nota? ")
+		leia(aluno1n3)
+		escreva("Qual o nome da sua quarta nota? ")
+		leia(aluno1n4)
+		escreva("Qual o nome da sua quinta nota? ")
+		leia(aluno1n5)
+
+		escreva("Qual o nome do segundo aluno? ")
+		leia(aluno2)
+		escreva("Qual o nome da sua primeira nota? ")
+		leia(aluno2n1)
+		escreva("Qual o nome da sua segunda nota? ")
+		leia(aluno2n2)
+		escreva("Qual o nome da sua terceira nota? ")
+		leia(aluno2n3)
+		escreva("Qual o nome da sua quarta nota? ")
+		leia(aluno2n4)
+		escreva("Qual o nome da sua quinta nota? ")
+		leia(aluno2n5)
+
+		escreva("Qual o nome do terceiro aluno? ")
+		leia(aluno3)
+		escreva("Qual o nome da sua primeira nota? ")
+		leia(aluno3n1)
+		escreva("Qual o nome da sua segunda nota? ")
+		leia(aluno3n2)
+		escreva("Qual o nome da sua terceira nota? ")
+		leia(aluno3n3)
+		escreva("Qual o nome da sua quarta nota? ")
+		leia(aluno3n4)
+		escreva("Qual o nome da sua quinta nota? ")
+		leia(aluno3n5)
+
+		escreva("Qual o nome do quarto aluno? ")
+		leia(aluno4)
+		escreva("Qual o nome da sua primeira nota? ")
+		leia(aluno4n1)
+		escreva("Qual o nome da sua segunda nota? ")
+		leia(aluno4n2)
+		escreva("Qual o nome da sua terceira nota? ")
+		leia(aluno4n3)
+		escreva("Qual o nome da sua quarta nota? ")
+		leia(aluno4n4)
+		escreva("Qual o nome da sua quinta nota? ")
+		leia(aluno4n5)
+
+		escreva("Qual o nome do quinto aluno? ")
+		leia(aluno5)
+		escreva("Qual o nome da sua primeira nota? ")
+		leia(aluno5n1)
+		escreva("Qual o nome da sua segunda nota? ")
+		leia(aluno5n2)
+		escreva("Qual o nome da sua terceira nota? ")
+		leia(aluno5n3)
+		escreva("Qual o nome da sua quarta nota? ")
+		leia(aluno5n4)
+		escreva("Qual o nome da sua quinta nota? ")
+		leia(aluno5n5)
+
+		media1 = (aluno1n1 + aluno1n2 + aluno1n3 + aluno1n4 +aluno1n5) / 5
+		media2 = (aluno2n1 + aluno2n2 + aluno2n3 + aluno2n4 +aluno2n5) / 5
+		media3= (aluno3n1 + aluno3n2 + aluno3n3 + aluno3n4 +aluno3n5) / 5
+		media4= (aluno4n1 + aluno4n2 + aluno4n3 + aluno4n4 +aluno4n5) / 5
+		media5= (aluno5n1 + aluno5n2 + aluno5n3 + aluno5n4 +aluno5n5) / 5
+
+		se (media1 >= 7)  
+		escreva("O aluno " + aluno1 + " teve media " + media1 + " e foi aprovado")
+		
+		senao 
+		escreva("O aluno " + aluno1 + " teve media " + media1 +  " e esta em recuperacao")
+		
+		
+		se (media2 >= 7) 
+		escreva("\nO aluno " + aluno2 + " teve media " + media2 + " e foi aprovado")
+		
+		senao 
+		escreva("\nO aluno " + aluno2 + " teve media " + media2 +  " e esta em recuperacao")
+
+		se (media3 >= 7) 
+		escreva("\nO aluno " + aluno3 + " teve media " + media3 + " e foi aprovado")
+		
+		senao 
+		escreva("\nO aluno " + aluno3 + " teve media " + media3 +  " e esta em recuperacao")
+
+		se (media4 >= 7) 
+		escreva("\nO aluno " + aluno4 + " teve media " + media4 + " e foi aprovado")
+		
+		senao 
+		escreva("\nO aluno " + aluno4 + " teve media " + media4 +  " e esta em recuperacao")
+
+		se (media5 >= 7)   
+		escreva("\nO aluno " + aluno5 + " teve media " + media5 + " e foi aprovado")
+		
+		senao 
+		escreva("\nO aluno " + aluno5 + " teve media " + media5 +  " e esta em recuperacao")
+
+	}
+}
