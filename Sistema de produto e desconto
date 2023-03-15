@@ -1,0 +1,58 @@
+programa
+{
+	
+	funcao inicio()
+	{
+		cadeia produto1, produto2, produto3
+		real valorproduto1, valorproduto2, valorproduto3
+		real porcentagem1, porcentagem2, porcentagem3
+		real desconto1, desconto2, desconto3
+		real resposta1, resposta2
+
+		escreva("Qual o primeiro produto? ")
+		leia(produto1)
+
+		escreva("Qual o valor do primeiro produto? ")
+		leia(valorproduto1)
+
+		escreva("Qual o desconto do produto 1? ")
+		leia(porcentagem1)
+
+		escreva("Deseja mais alguma coisa? ")
+		leia(resposta1)
+		
+		se (resposta1 == "sim") {
+		
+			escreva("Qual o segundo produto? ")
+			leia(produto2)
+		
+			escreva("Qual o valor do segundo produto? ")
+			leia(valorproduto2)
+
+			escreva("Qual o desconto do produto 2? ")
+			leia(porcentagem2)
+		
+			escreva("Deseja mais alguma coisa? ")
+			leia(resposta2)
+		
+			se (resposta2 == "sim") {
+		
+				escreva("Qual o terceiro produto? ")
+				leia(produto3)
+		
+				escreva("Qual o valor do terceiro produto? ")
+				leia(valorproduto3)
+
+				escreva("Qual o desconto do produto 3? ")
+				leia(desconto3) 
+				}
+		}
+
+		desconto1 = (valorproduto1 * porcentagem1 / 100)
+		resposta1 = (valorproduto1 - desconto1)
+
+		escreva(produto1)
+		escreva(desconto1)
+		escreva(resposta1)
+	}
+}
