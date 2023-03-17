@@ -1,0 +1,38 @@
+programa
+{
+	
+	funcao inicio()
+	{
+
+		inteiro num1 = 0, num2 = 0, num3 = 0, num4 = 0, num5 = 0
+		inteiro maiorNumero = 0
+
+		escreva("Insira o primeiro numero: ")
+		leia(num1)
+		escreva("Insira o segundo numero: ")
+		leia(num2)
+		escreva("Insira o terceiro numero: ")
+		leia(num3)
+		escreva("Insira o quarto numero: ")
+		leia(num4)
+		escreva("Insira o quinto numero: ")
+		leia(num5)
+
+		se (num1 > maiorNumero)
+			maiorNumero = num1
+			
+		se (num2 > maiorNumero)
+			maiorNumero = num2
+			
+		se (num3 > maiorNumero)
+			maiorNumero = num3
+			
+		se (num4 > maiorNumero)
+			maiorNumero = num4
+			
+		se (num5 > maiorNumero)
+			maiorNumero = num5
+			
+		escreva(maiorNumero)
+	}
+}
