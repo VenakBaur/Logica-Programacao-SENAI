@@ -1,0 +1,99 @@
+programa
+{
+	
+	funcao inicio()
+	{
+		cadeia origem1, origem2, origem3, resumo1, resumo2, resumo3
+		cadeia destino1, destino2, destino3
+		real km1, km2, km3
+		real valor1, valor2, valor3
+		real maiorKm, menorValor
+		
+
+		escreva("Qual a origem da viagem 1: ")
+		leia(origem1)
+
+		escreva("Qual o destino da viagem 1: ")
+		leia(destino1)
+
+		escreva("Quantos kms na viagem 1: ")
+		leia(km1)
+
+		escreva("Qual o valor da viagem 1: ")
+		leia(valor1)
+
+		escreva("Qual a origem da viagem 2: ")
+		leia(origem2)
+
+		escreva("Qual o destino da viagem 2: ")
+		leia(destino2)
+
+		escreva("Quantos kms na viagem 2: ")
+		leia(km2)
+
+		escreva("Qual o valor da viagem 2: ")
+		leia(valor2)
+
+		escreva("Qual a origem da viagem 3: ")
+		leia(origem3)
+
+		escreva("Qual o destino da viagem 3: ")
+		leia(destino3)
+
+		escreva("Quantos kms na viagem 3: ")
+		leia(km3)
+
+		escreva("Qual o valor da viagem 3: ")
+		leia(valor3)
+
+		maiorKm = 0.0
+		menorValor = valor1
+
+		resumo1 = "Origem: " + origem1 + ". Destino: " + destino1 + ". Distancia: " + km1 + ". Valor: " + valor1
+		resumo2 = "Origem: " + origem2 + ". Destino: " + destino2 + ". Distancia: " + km2 + ". Valor: " + valor2
+		resumo3 = "Origem: " + origem3 + ". Destino: " + destino3 + ". Distancia: " + km3 + ". Valor: " + valor3
+
+		se (km1 > maiorKm)		
+			maiorKm = km1
+
+		se (km2 > maiorKm)
+			maiorKm = km2
+
+		se (km3 > maiorKm)
+			maiorKm = km3
+
+		se (valor1 < menorValor)
+			menorValor = valor1
+
+		se (valor2 < menorValor)
+			menorValor = valor2
+
+		se (valor3 < menorValor)
+			menorValor = valor3
+			
+
+		escreva("\nViagem de maior distancia:\n")
+
+		
+		se (maiorKm == km1)
+			escreva("\n" + resumo1)
+
+		se (maiorKm == km2)
+			escreva("\n" + resumo2)	
+
+		se (maiorKm == km3)
+			escreva("\n" + resumo3)
+
+		escreva("\nViagem de menor valor:\n")
+		
+
+		se (menorValor == valor1)
+			escreva("\n" + resumo1)
+
+		se (menorValor == valor2)
+			escreva("\n" + resumo2)
+
+		se (menorValor == valor3)
+			escreva("\n" + resumo3)		
+	}
+}
