@@ -1,0 +1,39 @@
+programa
+{
+	
+	funcao inicio()
+	{
+		real num1 = 0.0 , num2 = 0.0
+		real soma, subtracao, multiplicacao, divisao
+		cadeia operacao
+		
+		escreva("Qual o primeiro numero: ")
+		leia(num1)
+
+		escreva("Qual operacao usar? (+, -, *, /) ")
+		leia(operacao)
+
+		escreva("Qual o segundo numero: ")
+		leia(num2)
+		
+		soma = (num1 + num2)
+		subtracao = (num1 - num2)
+		multiplicacao = (num1 * num2)
+		divisao = (num1 / num2)
+		
+		se (num2 == 0)
+			divisao = (num1 / 1)
+		
+		se (operacao == "+")
+			escreva("A soma dos numeros e igual a " + soma) 
+				
+		se (operacao == "-")
+			escreva("A subtracao dos numeros e igual a " + subtracao)
+			
+		se (operacao == "*") 
+			escreva("A multiplicacao do numeros e igual a " + multiplicacao)
+
+		se (operacao == "/") 
+			escreva("A divisao dos numeros e igual a " + divisao)
+	}
+}
