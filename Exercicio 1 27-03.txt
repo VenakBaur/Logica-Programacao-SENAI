@@ -1,0 +1,20 @@
+programa
+{
+	
+	funcao inicio()
+	{
+		real num1, num2
+
+		escreva("Insira o numero 1: ")
+		leia(num1)
+
+		escreva("Insira o numero2: ")
+		leia(num2)
+		
+		se (num1==num2) {
+			escreva("Resultado: Igual")
+		} senao {
+			escreva("Resultado: Diferente")	
+		}
+	}
+}
