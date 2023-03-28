@@ -1,0 +1,69 @@
+programa
+{
+	
+	funcao inicio()
+	{
+		real num1 = 0.0 , num2 = 0.0 , num3 = 0.0 , resultado1 = 0.0, resultado2 = 0.0
+		cadeia operacao
+		
+		escreva("Qual o primeiro numero: ")
+		leia(num1)
+
+		escreva("Qual operacao usar? (+, -, *, /) ")
+		leia(operacao)
+
+		escreva("Qual o segundo numero: ")
+		leia(num2)
+
+		se (operacao == "+") {
+			resultado1 = num1 + num2
+		}
+				
+		se (operacao == "-"){
+			resultado1 = num1 - num2
+		}
+		
+		se (operacao == "*") {
+			resultado1 = num1 * num2
+		}
+		
+		se (operacao == "/") {
+			se (num2 == 0.0) {
+				num2 = 1.0
+			}
+			resultado1 = num1 / num2
+			
+		}
+		
+		escreva("Resultado 1: " + resultado1)
+
+		escreva("\nQual o terceiro numero: ")
+		leia(num3)
+		
+		escreva("Qual operacao usar? (+, -, *, /) ")
+		leia(operacao)
+
+		se (operacao == "+") {
+			resultado2 = resultado1 + num3
+		}
+				
+		se (operacao == "-"){
+			resultado2 = resultado1 - num3
+		}
+		
+		se (operacao == "*") {
+			resultado2 = resultado1 * num3
+		}
+		
+		se (operacao == "/") {
+			se (num2 == 0.0) {
+				num2 = 1.0
+			}
+			resultado2 = resultado1 / num3
+			
+		}
+
+		escreva("Resultado 2: " + resultado2)
+		
+	}
+} 
