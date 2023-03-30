@@ -1,0 +1,36 @@
+programa
+{
+	
+	funcao inicio()
+	{
+		real ladoA = 0.0 , ladoB = 0.0 , ladoC = 0.0
+
+		escreva("Tamanho do lado A: ")
+		leia(ladoA)
+
+		escreva("Tamanho do lado B: ")
+		leia(ladoB)
+
+		escreva("Tamanho do lado C: ")
+		leia(ladoC)
+
+		se (((ladoA + ladoB) > ladoC) e ((ladoB + ladoC) > ladoA) e ((ladoA + ladoC) > ladoB)) {
+
+			se ((ladoA == ladoB) e (ladoB == ladoC)) {
+				escreva("Triangulo Equilatero")
+			}
+			  
+			senao se ((ladoA == ladoB) ou (ladoB == ladoC) ou (ladoA == ladoC)) {
+				escreva("Triangulo Isosceles")
+			}
+			
+			senao
+				escreva("Triangulo Escaleno")	
+		}
+
+		senao {
+			escreva("Não é possível formar um triângulo com os valores informados")
+		}
+		
+	}
+}
