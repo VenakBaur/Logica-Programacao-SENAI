@@ -1,0 +1,36 @@
+package triangulo;
+
+import java.util.Scanner;
+
+public class Triangulo {
+
+    public static void main(String[] args) {
+        
+        Scanner sc = new Scanner(System.in);
+        
+        float ladoA = 0.0f, ladoB = 0.0f, ladoC = 0.0f;
+        
+        System.out.print("Tamanho lado A: ");
+        ladoA = sc.nextFloat();
+        
+        System.out.print("Tamanho lado B: ");
+        ladoB = sc.nextFloat();
+        
+        System.out.print("Tamanho lado C: ");
+        ladoC = sc.nextFloat();
+        
+        if ( ( (ladoA + ladoB) > ladoC) & ( (ladoB + ladoC) > ladoA) & ( (ladoA + ladoC) > ladoB) ) {
+            
+            if ( (ladoA == ladoB) & (ladoB == ladoC) & (ladoA == ladoC) ) {
+                System.out.println("Triangulo Equilatero");        
+        }
+            else if ( (ladoA == ladoB) || (ladoB == ladoC) || (ladoA == ladoC) ) {  
+                System.out.println("Triangulo Isosceles");
+            } else {
+                System.out.println("Triangulo Escaleno ");
+            }
+        } else {
+            System.out.println("Nao e possivel formar um triangulo com os valores informados");
+        }
+    }
+}
