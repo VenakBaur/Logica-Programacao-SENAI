@@ -1,0 +1,57 @@
+package maiormenor;
+
+import java.util.Scanner;
+
+public class MaiorMenor {
+
+    public static void main(String[] args) {
+        
+        Scanner sc = new Scanner(System.in);
+        
+        double num1, num2, num3;
+        double maiorNumero = 0.0, menorNumero = 0.0, numeroMeio;
+        
+        System.out.print("Informe o numero 1: ");
+        num1 = sc.nextDouble();
+        
+        System.out.print("Informe o numero 2: ");
+        num2 = sc.nextDouble();
+        
+        System.out.print("Informe o numero 3: ");
+        num3 = sc.nextDouble();
+        
+        if ( (num1 > num2) & (num1 > num3)) {
+            maiorNumero = num1;
+        } else if (num2 > num3) {
+            maiorNumero = num2;
+        } else {
+            maiorNumero = num3;
+        }
+        
+        if ( (num1 < num2) & (num1 < num3)) {
+            menorNumero = num1;
+        } else if (num2 < num3) {
+            menorNumero = num2;
+        } else {
+            menorNumero = num3;
+        }
+        
+        if ((num1 == maiorNumero) || (num1 == menorNumero)) {
+            
+            if ((num2 == maiorNumero) || (num2 == menorNumero)) {
+                numeroMeio = num3;
+            } else {
+                numeroMeio = num2;
+            }   
+        } else {
+            numeroMeio = num1;
+        }
+        
+        System.out.println("O menor numero e: " + menorNumero);
+        
+        System.out.println("O maior numero e: " + maiorNumero);
+        
+        System.out.println("O numero do meio e: " + numeroMeio);
+        
+    }    
+}
