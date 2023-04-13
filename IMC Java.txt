@@ -1,0 +1,33 @@
+import javax.swing.JOptionPane;
+
+public class IMC {
+ 
+    public static void main(String[] args) {
+        
+        float formulaIMC;
+        float peso;
+        float altura;
+        
+        peso = Float.parseFloat(JOptionPane.showInputDialog("Qual o seu peso?"));
+        altura = Float.parseFloat(JOptionPane.showInputDialog("Qual a sua altura?"));
+        
+        formulaIMC = peso / (altura * altura);
+        
+        if ((formulaIMC >= 16.0) && (formulaIMC <= 16.9)) {
+            JOptionPane.showMessageDialog(null, "Muito abaixo do peso " + formulaIMC);
+   
+        } else if ((formulaIMC >= 17.0) && (formulaIMC <= 18.4)) {
+            JOptionPane.showMessageDialog(null, "Abaixo do peso " + formulaIMC);
+        } else if ((formulaIMC >= 18.5) && (formulaIMC <= 24.9)) {
+            JOptionPane.showMessageDialog(null, "Peso normal " + formulaIMC);
+        } else if ((formulaIMC >= 25) && (formulaIMC <= 29.9)) {
+            JOptionPane.showMessageDialog(null, "Acima do peso " + formulaIMC);
+        } else if ((formulaIMC >= 30) && (formulaIMC <= 34.9)) {
+            JOptionPane.showMessageDialog(null, "Obesidade grau I " + formulaIMC);
+        } else if ((formulaIMC >= 35) && (formulaIMC <= 40)) {
+            JOptionPane.showMessageDialog(null, "Obesidade grau II " + formulaIMC);
+        } else if (formulaIMC > 40){
+            JOptionPane.showMessageDialog(null, "Obesidade grau III " + formulaIMC);
+        }
+    } 
+}
