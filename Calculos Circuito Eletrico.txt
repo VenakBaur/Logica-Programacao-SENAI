@@ -1,0 +1,64 @@
+programa
+{
+	
+	funcao inicio()
+	{
+
+		real potencia = 0.0, tensao = 0.0, corrente = 0.0, resistencia = 0.0
+		real calculoPotencia = 0.0, calculoResistencia = 0.0, calculoCorrente = 0.0, calculoTensao
+		cadeia operacao
+
+		escreva("Informe o tipo de operação de deseja realizar:\n(P) para potencia elétrica, (C) para corrente elétrica, (R) para resistência elétrica ou (V) para tensao elétrica: ")
+		leia(operacao)
+
+		se (operacao == "P") {
+
+			escreva("Informe a tensao eletrica: ")
+			leia(tensao)
+
+			escreva("Informe a corrente eletrica: ")
+			leia(corrente)
+
+			calculoPotencia = tensao * corrente
+
+			escreva("A potencia e de " + calculoPotencia + "W")
+			
+		} senao se (operacao == "C") {
+
+			escreva("Informe a tensao eletrica: ")
+			leia(tensao)
+
+			escreva("Informe a resistencia: ")
+			leia(resistencia)
+
+			calculoCorrente = tensao / resistencia
+
+			escreva("A corrente e de " + calculoCorrente + "A")
+			
+		} senao se (operacao == "R") {
+
+			escreva("Informe a tensao eletrica: ")
+			leia(tensao)
+
+			escreva("Informe a corrente eletrica: ")
+			leia(corrente)
+
+			calculoResistencia = tensao / corrente
+
+			escreva("A resistencia e de " + calculoResistencia + "Ω")
+			
+		} senao se (operacao == "V") {
+
+			escreva("Informe a resistencia eletrica: ")
+			leia(resistencia)
+
+			escreva("Informe a corrente eletrica: ")
+			leia(corrente)
+
+			calculoTensao = resistencia * corrente
+
+			escreva("A tensao e de " + calculoTensao + "V")
+			
+		}
+	}
+}
