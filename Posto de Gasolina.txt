@@ -1,0 +1,76 @@
+programa
+{
+	
+	funcao inicio()
+	{
+		cadeia combustivel
+		cadeia nomeFrentista, pagamento
+		real valorGasolina = 0.0, litros, valorTotalGasolina, desconto, valorDescontado, avaliacao, impostoGasolina, impostoTotalGasolina
+
+		escreva("Qual combustivel voce quer colocar? ")
+		leia(combustivel)
+
+		escreva("Quantos litros de gasolina? ")
+		leia(litros)
+
+		escreva("Qual a forma de pagamento? ")
+		leia(pagamento)
+
+		escreva("Qual o nome do frentista? ")
+		leia(nomeFrentista)
+		
+		escreva("0 a 5 estrelas o atendimento do frentista: ")
+		leia(avaliacao)
+
+		se (combustivel == "gasolina comum") {
+
+			valorGasolina = 5.35
+			
+		} senao se (combustivel == "gasolina aditivada") {
+			
+			valorGasolina = 5.85
+
+		} senao se (combustivel == "etanol") {
+			
+			valorGasolina = 3.75
+
+		} senao se (combustivel == "diesel") {
+			
+			valorGasolina = 6.69
+
+		}
+		
+		se (pagamento == "dinheiro") {
+
+			valorTotalGasolina = valorGasolina * litros
+			desconto = (valorTotalGasolina * 7) / 100
+			valorDescontado = valorTotalGasolina - desconto
+			
+			impostoGasolina = (valorGasolina * 17) / 100
+			impostoTotalGasolina = impostoGasolina * litros
+
+			escreva("Valor com desconto: " + valorDescontado)
+			escreva("\nImpostos: " + impostoTotalGasolina)
+			
+		} senao se (pagamento == "debito") {
+
+			valorTotalGasolina = valorGasolina * litros
+			
+			impostoGasolina = (valorGasolina * 17) / 100
+			impostoTotalGasolina = impostoGasolina * litros
+
+			escreva("Valor com desconto: " + valorTotalGasolina)
+			escreva("\nImpostos: " + impostoTotalGasolina)
+			
+		} senao se (pagamento == "credito") {
+
+			valorTotalGasolina = valorGasolina * litros
+			
+			impostoGasolina = (valorGasolina * 17) / 100
+			impostoTotalGasolina = impostoGasolina * litros
+
+			escreva("Valor com desconto: " + valorTotalGasolina)
+			escreva("\nImpostos: " + impostoTotalGasolina)
+		}
+	}
+}
