@@ -1,0 +1,92 @@
+programa
+{
+
+	funcao inicio()
+	{
+
+		cadeia nome, tipoSessao, pagamento
+		inteiro idade, filme1 = 18, filme2 = 18, filme3 = 18, filme4 = 16, filmeEscolhido
+
+		escreva("Saudacoes pequeno gafanhoto! \nMe diga o seu nome: ")
+		leia(nome)
+
+		escreva("Qual a sua idade? ")
+		leia(idade)
+
+		escreva("Qual filme voce quer assistir? (1 a 4) ")
+		leia(filmeEscolhido)
+
+		se (filmeEscolhido == 1) {
+
+			se (idade >= filme1) {
+
+				escreva("Qual o tipo de sessão? \n(Sessao mais em conta) \n(Sessao normal) \n(Sessao 3D)\n")
+				leia(tipoSessao)
+
+				escreva("Qual a forma de pagamento? (dinheiro/cartao): ")
+				leia(pagamento)
+
+				escreva(nome + "\n" + idade + " anos" + "\n" + "Filme " + filmeEscolhido + " " + tipoSessao + "\n" + "Forma de pagamento: " + pagamento)
+				
+			} senao {
+
+				escreva("Voce não tem a idade necessaria para assistir esse filme")
+				
+			}
+			
+		} senao se (filmeEscolhido == 2) {
+
+			se (idade >= filme2) {
+
+				escreva("Qual o tipo de sessão? \n(Sessao mais em conta) \n(Sessao normal) \n(Sessao 3D)\n")
+				leia(tipoSessao)
+
+				escreva("Qual a forma de pagamento? (dinheiro/cartao): ")
+				leia(pagamento)
+
+				escreva(nome + "\n" + idade + " anos" + "\n" + "Filme " + filmeEscolhido + " " + tipoSessao + "\n" + "Forma de pagamento: " + pagamento)
+			
+		} senao {
+
+				escreva("Voce não tem a idade necessaria para assistir esse filme")
+
+		}
+
+		} senao se (filmeEscolhido == 3) {
+
+			se (idade >= filme3) {
+
+				escreva("Qual o tipo de sessão? \n(Sessao mais em conta) \n(Sessao normal) \n(Sessao 3D)\n")
+				leia(tipoSessao)
+
+				escreva("Qual a forma de pagamento? (dinheiro/cartao): ")
+				leia(pagamento)
+
+				escreva(nome + "\n" + idade + " anos" + "\n" + "Filme " + filmeEscolhido + " " + tipoSessao + "\n" + "Forma de pagamento: " + pagamento)
+				
+			} senao {
+
+				escreva("Voce não tem a idade necessaria para assistir esse filme")
+				
+			}
+			
+		} senao se (filmeEscolhido == 4) {
+
+			se (idade <= filme4) {
+
+				escreva("Qual o tipo de sessão? \n(Sessao mais em conta) \n(Sessao normal) \n(Sessao 3D)\n")
+				leia(tipoSessao)
+
+				escreva("Qual a forma de pagamento? (dinheiro/cartao): ")
+				leia(pagamento)
+
+				escreva(nome + "\n" + idade + " anos" + "\n" + "Filme " + filmeEscolhido + " " + tipoSessao + "\n" + "Forma de pagamento: " + pagamento)
+				
+			} senao {
+
+				escreva("Voce não tem a idade necessaria para assistir esse filme")
+				
+			}
+		}	
+	}
+}
