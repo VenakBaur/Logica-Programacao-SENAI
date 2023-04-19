@@ -1,0 +1,120 @@
+programa
+{
+	
+	funcao inicio()
+	{
+				
+		cadeia tamanho, sabor1, sabor2, sabor3, sabor4, sabor
+		real valorPequena = 30.0, valorMedia = 50.0, valorGrande = 70.0
+		real bacon = 0.0, doritos = 0.0, margherita = 0.0, sensacao = 5.0, camarao = 5.0
+								
+		escreva("Qual o tamanho da pizza? (P),(M),(G) ")
+		leia(tamanho)
+
+		se (tamanho == "P") {
+
+			escreva("Escolha o 1º sabor: \nbacon\ndoritos\nmargherita\nsensacao\ncamarao\n\n")
+			leia(sabor1)
+
+			escreva("\nEscolha o 2º sabor: \nbacon\ndoritos\nmargherita\nsensacao\ncamarao\n\n")
+			leia(sabor2)
+
+			se ((sabor1 == "sensacao") ou (sabor1 == "camarao")) {
+
+				valorPequena = valorPequena + 5													
+				 
+			} 
+
+			se ((sabor2 == "sensacao") ou (sabor2 == "camarao")) {
+
+				valorPequena = valorPequena + 5
+
+				escreva("\nTamanho pizza: " + tamanho + "\n" + "Sabores: " + sabor1 + ", " + sabor2 + "\n" + valorPequena)
+				
+			} senao {
+
+				escreva("\nTamanho pizza: " + tamanho + "\n" + "Sabores: " + sabor1 + ", " + sabor2 + "\n" + valorPequena)
+				
+			}
+
+		} senao se (tamanho == "M") {	
+
+			escreva("Escolha o 1º sabor: \nbacon\ndoritos\nmargherita\nsensacao\ncamarao\n\n")
+			leia(sabor1)
+
+			escreva("\nEscolha o 2º sabor: \nbacon\ndoritos\nmargherita\nsensacao\ncamarao\n\n")
+			leia(sabor2)
+
+			escreva("\nEscolha o 3º sabor: \nbacon\ndoritos\nmargherita\nsensacao\ncamarao\n\n")
+			leia(sabor3)
+
+			se ((sabor1 == "sensacao") ou (sabor1 == "camarao")) {
+
+				valorMedia = valorMedia + 5													
+				 
+			} 
+
+			se ((sabor2 == "sensacao") ou (sabor2 == "camarao")) {
+
+				valorMedia = valorMedia + 5
+				
+			}
+
+			se ((sabor3 == "sensacao") ou (sabor3 == "camarao")) {
+
+				valorMedia = valorMedia + 5
+
+				escreva("\nTamanho pizza: " + tamanho + "\n" + "Sabores: " + sabor1 + ", " + sabor2 + ", " + sabor3 + "\n" + valorMedia)	
+			
+			} senao {
+
+				escreva("\nTamanho pizza: " + tamanho + "\n" + "Sabores: " + sabor1 + ", " + sabor2 + ", " + sabor3 + "\n" + valorMedia)	
+				
+			}
+			
+		} senao se (tamanho == "G") {
+
+			escreva("Escolha o 1º sabor: \nbacon\ndoritos\nmargherita\nsensacao\ncamarao\n\n")
+			leia(sabor1)
+
+			escreva("\nEscolha o 2º sabor: \nbacon\ndoritos\nmargherita\nsensacao\ncamarao\n\n")
+			leia(sabor2)
+
+			escreva("\nEscolha o 3º sabor: \nbacon\ndoritos\nmargherita\nsensacao\ncamarao\n\n")
+			leia(sabor3)
+
+			escreva("\nEscolha o 4º sabor: \nbacon\ndoritos\nmargherita\nsensacao\ncamarao\n\n")
+			leia(sabor4)
+
+			se ((sabor1 == "sensacao") ou (sabor1 == "camarao")) {
+
+				valorGrande = valorGrande + 5													
+				 
+			} 
+
+			se ((sabor2 == "sensacao") ou (sabor2 == "camarao")) {
+
+				valorGrande = valorGrande + 5
+				
+			}
+
+			se ((sabor3 == "sensacao") ou (sabor3 == "camarao")) {
+
+				valorGrande = valorGrande + 5				
+			
+			}
+
+			se ((sabor4 == "sensacao") ou (sabor4 == "camarao")) {
+
+				valorGrande = valorGrande + 5
+
+				escreva("\nTamanho pizza: " + tamanho + "\n" + "Sabores: " + sabor1 + ", " + sabor2 + ", " + sabor3 + ", " + sabor4 + "\n" + valorGrande)				
+			
+			} senao {
+
+				escreva("\nTamanho pizza: " + tamanho + "\n" + "Sabores: " + sabor1 + ", " + sabor2 + ", " + sabor3 + ", " + sabor4 + "\n" + valorGrande)				
+				
+			}
+		}
+	}
+}
