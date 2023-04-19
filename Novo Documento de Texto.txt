@@ -1,0 +1,48 @@
+programa
+{
+	
+	funcao inicio()
+	{
+		
+		cadeia operadora = ""
+		real minutosligando = 0.0, quantidadeMB = 0.0, valorTotal = 0.0
+		inteiro quantidadeSMS
+
+		real valorMinutoTim = 0.35, valorSMSTim = 0.10, valorMB1Tim = 0.015, valorMB2Tim = 0.01
+		real valorMinutoVivo = 0.30, valorSMSVivo = 0.10, valorMB1Vivo = 0.012, valorMB2Vivo = 0.09
+
+		real valorMinuto = 0.0, valorSMS = 0.0, valorMB1 = 0.0, valorMB2
+
+		escreva("Informe sua operadora (TIM ou VIVO) ")
+		leia(operadora)
+
+		escreva("Informe a quantidade de ligacao: ")
+		leia(minutosligando)
+
+		escreva("Informe a quantidade de SMS: ")
+		leia(quantidadeSMS)
+		
+		
+		escreva("Informe a quantidade de Internet: ")
+		leia(quantidadeMB)
+
+		se (operadora == "TIM") {
+
+			valorMinuto = valorMinutoTim
+			valorSMS = valorSMSTim
+			valorMB1 = valorMB1Tim
+			valorMB2 = valorMB2Tim
+
+		} senao se (operadora == "VIVO") {
+
+			valorMinuto = valorMinutoVivo
+			valorSMS = valorSMSVivo
+			valorMB1 = valorMB1Vivo
+			valorMB2 = valorMB2Vivo
+			
+		}
+
+		valorTotal += valorSMS * quantidadeSMS
+		
+	}
+}
