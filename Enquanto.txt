@@ -1,0 +1,22 @@
+programa
+{
+	
+	funcao inicio()
+	{
+
+		inteiro i = 0
+		cadeia parar = "N"
+
+		enquanto ( parar != "S" ) {
+			
+			escreva("Deseja interromper a estrutura? (S/N): ")
+			leia(parar)
+			
+			i += 1
+			
+		}
+		
+		escreva("valor de i = " + i)
+		
+	}
+}
