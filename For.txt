@@ -1,0 +1,26 @@
+package pkgwhile;
+
+import javax.swing.JOptionPane;
+
+public class For {
+    
+    public static void main(String[] args) {
+        
+        int quantidade = Integer.parseInt(JOptionPane.showInputDialog("Informe a quantidade de produtos que deseja cadastrar:"));
+        float somaValores  = 0.0f;
+        
+        for (int i = 0; i < quantidade; i++) {
+            
+            String nomeProduto = (JOptionPane.showInputDialog("Nome do produto: "));
+            float valor = Float.parseFloat(JOptionPane.showInputDialog("Preco R$: "));
+            somaValores += valor;
+            
+            System.out.println("Produtos: " + nomeProduto);
+            System.out.println("Valor: R$ " + valor);
+            System.out.println("\n###################\n");
+        }
+            
+        JOptionPane.showMessageDialog(null, "O valor total dos produtos foi: R$" + somaValores);
+        
+    } 
+}
