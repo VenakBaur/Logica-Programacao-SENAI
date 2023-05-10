@@ -7,8 +7,8 @@ programa
 
 		//variaveis
 
-		cadeia nomeAluno, atividades
-		real pesoAluno, alturaAluno, imc, valorAcademia, desconto = 0.0, valorPagar = 0.0
+		cadeia nomeAluno = "", atividades = ""
+		real pesoAluno, alturaAluno, imc, valorAcademia = 0.0, desconto = 0.0, valorPagar = 0.0
 		inteiro caloriasSemana
 
 		//entrada de dados
@@ -33,13 +33,21 @@ programa
 
 			valorAcademia = 80.0
 			atividades = "Musculacao"
+			valorPagar = valorAcademia
 			
-		} senao se (caloriasSemana <= 1850) {
+		} senao se (caloriasSemana > 450 e caloriasSemana < 1850) {
 
 			valorAcademia = 100.0
 			atividades = "Musculacao \nCorrida"
+			valorPagar = valorAcademia
 			
-		} senao {
+		} senao se (caloriasSemana > 1850 e caloriasSemana < 4000){
+
+			valorAcademia = 130.0
+			valorPagar = valorAcademia - desconto
+			atividades = "Musculacao \nCorrida \nBicicleta"
+			
+		} senao se (caloriasSemana >= 4000) {
 
 			valorAcademia = 130.0
 			desconto = valorAcademia * 50 / 100
@@ -50,7 +58,7 @@ programa
 
 		//saida de dados
 		
-		escreva("IMC: " + imc + "\n" +atividades)
+		escreva("IMC: " + imc + "\n" + atividades)
 		escreva("\nValor do plano: " + valorAcademia)
 		escreva("\nDesconto: " + desconto + "\nValor a pagar: " + valorPagar)
 		
