@@ -1,0 +1,58 @@
+programa
+{
+
+	
+	funcao inicio()
+	{
+
+		//variaveis
+
+		cadeia nomeAluno, atividades
+		real pesoAluno, alturaAluno, imc, valorAcademia, desconto = 0.0, valorPagar = 0.0
+		inteiro caloriasSemana
+
+		//entrada de dados
+
+		escreva("Qual o nome do aluno? ")
+		leia(nomeAluno)
+
+		escreva("Quantos kilos tem o aluno? ")
+		leia(pesoAluno)
+
+		escreva("Qual a altura do aluno? ")
+		leia(alturaAluno)
+
+		escreva("Quantas calorias ele pretende perder semanalmente? ")
+		leia(caloriasSemana)
+
+		//processamento
+
+		imc = pesoAluno / (alturaAluno * alturaAluno)
+
+		se (caloriasSemana <= 450) {
+
+			valorAcademia = 80.0
+			atividades = "Musculacao"
+			
+		} senao se (caloriasSemana <= 1850) {
+
+			valorAcademia = 100.0
+			atividades = "Musculacao \nCorrida"
+			
+		} senao {
+
+			valorAcademia = 130.0
+			desconto = valorAcademia * 50 / 100
+			valorPagar = valorAcademia - desconto
+			atividades = "Musculacao \nCorrida \nBicicleta"
+			
+		}
+
+		//saida de dados
+		
+		escreva("IMC: " + imc + "\n" +atividades)
+		escreva("\nValor do plano: " + valorAcademia)
+		escreva("\nDesconto: " + desconto + "\nValor a pagar: " + valorPagar)
+		
+	}
+}
