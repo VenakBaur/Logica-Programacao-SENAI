@@ -1,0 +1,60 @@
+
+package academiajava;
+
+import javax.swing.JOptionPane;
+
+public class AcademiaJava {
+
+    public static void main(String[] args) {
+
+        //variaveis
+        String atividades = "";
+        String nomeAluno = "";
+        float pesoAluno = 0.0f, alturaAluno = 0.0f, imc, valorAcademia = 0.0f, desconto = 0.0f, valorPagar = 0.0f;
+        int caloriasSemana = 0;
+
+        //entrada de dados
+        nomeAluno = JOptionPane.showInputDialog("Qual o nome do Aluno?");
+
+        pesoAluno = Float.parseFloat(JOptionPane.showInputDialog("Qual o peso do aluno?"));
+
+        alturaAluno = Float.parseFloat(JOptionPane.showInputDialog("Qual a altura do aluno?"));
+
+        caloriasSemana = Integer.parseInt(JOptionPane.showInputDialog("Quantas calorias pretende perder na semana?"));
+
+        //processamento
+        imc = pesoAluno / (alturaAluno * alturaAluno);
+
+        if (caloriasSemana <= 450) {
+
+            valorAcademia = 80.0f;
+            valorPagar = valorAcademia;
+            atividades = "Musculacao";
+
+        } else if (caloriasSemana >= 450 && caloriasSemana < 1850) {
+
+            valorAcademia = 100.0f;
+            valorPagar = valorAcademia;
+            atividades = "Musculacao \nCorrida";
+
+        } else if (caloriasSemana >= 1850 && caloriasSemana < 4000) {
+
+            valorAcademia = 130.0f;
+            atividades = "Musculacao \nCorrida \nBicicleta";
+            valorPagar = valorAcademia;
+            
+        } else if (caloriasSemana >= 4000) {
+            
+            valorAcademia = 130.0f;
+            atividades = "Musculacao \nCorrida \nBicicleta";
+            desconto = valorAcademia * 50 / 100;
+            valorPagar = valorAcademia - desconto;
+        }
+
+        //saida de dados
+        JOptionPane.showMessageDialog(null, "IMC: " + imc + "\n" + atividades);
+        JOptionPane.showMessageDialog(null, "\nValor do plano: " + valorAcademia);
+        JOptionPane.showMessageDialog(null, "\nDesconto: " + desconto + "\nValor a pagar: " + valorPagar);
+
+    }
+}
