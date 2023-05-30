@@ -5,7 +5,7 @@ programa
 	{
 
 		real notas[999], somaNotas = 0.0, media = 0.0
-		inteiro constante = 0
+		inteiro constante = 0, constante2 = 0, i = 0
 		cadeia nomes[999]
 		caracter resposta = 's'
 		real quantidadeNotas = 0.0
@@ -15,25 +15,25 @@ programa
 
 		faca {
 
-			para (inteiro i = 0; i <= quantidadeNotas; i++) {
+			constante = 0 constante2 = 0 somaNotas = 0.0
+
+			enquanto (constante < quantidadeNotas) {
 			
 				escreva("Qual o nome do aluno? ")
-				leia(nomes[i])
+				leia(nomes[constante])
 
 				escreva("Qual a nota do aluno? ")
-				leia(notas[i])
+				leia(notas[constante])
 
-				i++
+				constante++
 
 			}
 			
-			para (inteiro i2 = 0; i2 < quantidadeNotas; i2++) {
+			enquanto (constante2 < quantidadeNotas) {
 			
+				somaNotas = somaNotas + notas[constante2]
 
-
-				somaNotas += notas[i2]
-
-				i2++
+				constante2++
 				
 			}
 
@@ -42,7 +42,7 @@ programa
 			escreva("A media das notas e de: " + media)
 
 
-			escreva("Deseja continuar? (S/N) ")
+			escreva("\nDeseja continuar? (S/N) ")
 			leia(resposta)
 			
 		} enquanto (resposta == 's' ou resposta == 'S') 
