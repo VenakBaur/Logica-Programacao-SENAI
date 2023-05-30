@@ -1,0 +1,50 @@
+programa
+{
+	
+	funcao inicio()
+	{
+
+		real notas[999], somaNotas = 0.0, media = 0.0
+		inteiro constante = 0
+		cadeia nomes[999]
+		caracter resposta = 's'
+		real quantidadeNotas = 0.0
+
+		escreva("Qual sera a quantidade de notas? ")
+		leia(quantidadeNotas)
+
+		faca {
+
+			para (inteiro i = 0; i <= quantidadeNotas; i++) {
+			
+				escreva("Qual o nome do aluno? ")
+				leia(nomes[i])
+
+				escreva("Qual a nota do aluno? ")
+				leia(notas[i])
+
+				i++
+
+			}
+			
+			para (inteiro i2 = 0; i2 < quantidadeNotas; i2++) {
+			
+
+
+				somaNotas += notas[i2]
+
+				i2++
+				
+			}
+
+			media = somaNotas / quantidadeNotas
+
+			escreva("A media das notas e de: " + media)
+
+
+			escreva("Deseja continuar? (S/N) ")
+			leia(resposta)
+			
+		} enquanto (resposta == 's' ou resposta == 'S') 
+	}
+}
