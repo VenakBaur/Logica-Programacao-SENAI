@@ -1,0 +1,63 @@
+programa
+{
+	
+	funcao inicio()
+	{
+
+		
+		caracter resposta = 's'
+		
+		faca {
+
+			limpa()
+
+			calculaMedia()
+
+			escreva("Deseja continuar? (S/N) ")
+			leia(resposta)
+
+			se (resposta != 's' ou resposta != 's') {
+				
+			}
+			
+		} enquanto (resposta == 's' ou resposta == 'S')
+
+		escreva("Obrigado pela preferencia")
+		
+	}
+
+	funcao calculaMedia() {
+
+		real notas[999], somaNotas = 0.0, media = 0.0
+		inteiro constante = 0, constante2 = 0, i = 0
+		cadeia nomes[999]
+		real quantidadeNotas = 0.0
+		
+		escreva("Qual o nome do aluno? ")
+		leia(nomes[constante])
+		
+		escreva("Qual sera a quantidade de notas? ")
+		leia(quantidadeNotas)
+
+		para (inteiro contador = 0; contador < quantidadeNotas; contador++) {
+
+			escreva("Insira a nota do aluno? ")
+			leia(notas[contador])
+
+		}
+
+		enquanto (constante2 < quantidadeNotas) {
+			
+			somaNotas = somaNotas + notas[constante2]
+
+			constante2++
+				
+		}
+
+		media = somaNotas / quantidadeNotas
+
+		escreva("A media das notas e de: " + media + "\n")
+		
+	}
+	
+}
