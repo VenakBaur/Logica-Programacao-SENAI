@@ -1,0 +1,99 @@
+programa
+{
+
+	inclua biblioteca Util --> u
+
+	inteiro escolhaMenu = 0
+	cadeia produtos[999]
+	inteiro contador = 0
+	inteiro resposta = 0
+	
+	funcao inicio()
+	{
+
+		enquanto (resposta != 3 ou resposta != 3) {
+
+			u.aguarde(1500)
+
+			limpa()
+
+			menu()
+
+			resposta = escolhaMenu
+
+			} 
+
+		escreva("\nObrigado pela preferencia!\n")
+			
+		}
+
+	funcao menu() {
+
+		escreva("Menu\n\n")
+		
+		escreva("1 - Inserir\n")
+		escreva("2 - Exibir\n")
+		escreva("3 - Encerrar\n\n")
+		escreva("O que deseja fazer? ")
+		leia(escolhaMenu)
+
+		se (escolhaMenu == 1) {
+
+			inserir()
+			
+		} senao se (escolhaMenu == 2) {
+
+			exibir()
+			
+		} senao se (escolhaMenu == 3) {
+
+			encerrar()
+
+		}
+
+	}
+
+	funcao inserir() {
+
+		
+
+		faca {
+
+		escreva("Nome do produto: ")
+		leia(produtos[contador])
+
+		se (produtos[contador] == "") {
+
+			inserir()
+			
+		}
+		
+		} enquanto (produtos[contador] == "")
+
+		contador++
+		
+	}
+
+	funcao exibir() {
+
+		inteiro exibirProduto = 0
+
+		escreva("Deseja exibir qual produto? ")
+		leia(exibirProduto)
+
+		se (exibirProduto > contador ou exibirProduto < 0) {
+
+			exibir()
+			
+		}
+
+		escreva("Produto: " + produtos[exibirProduto])
+		
+	}	
+
+	funcao encerrar() {
+
+		resposta = 3
+		
+	}
+}
