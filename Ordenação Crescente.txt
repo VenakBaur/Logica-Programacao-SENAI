@@ -1,0 +1,38 @@
+programa
+{
+	
+	funcao inicio()
+	{
+
+		inteiro numeros[13] = {10,9,80,72,74,5,62,36,44,7,3,17,66}
+		inteiro numeroMaior = 0
+		
+		para (inteiro i = 0; i <= 12; i++) {
+
+			para(inteiro j = i; j<=12; j++) {
+
+				se (numeros[i] > numeros[j]) {
+
+					numeroMaior = numeros[i]
+					numeros[i] = numeros[j]
+					numeros[j] = numeroMaior
+
+				}
+
+			}
+			
+		}
+
+		para (inteiro i = 0; i <= 12; i++) {
+
+			se (i > 0) {
+
+				escreva(", ")
+			
+			}
+
+			escreva(numeros[i])
+			
+		}
+	}
+}
