@@ -1,0 +1,300 @@
+programa
+{
+
+	inclua biblioteca Tipos --> tp
+	inclua biblioteca Texto --> tx
+	inclua biblioteca Util --> u
+	
+	const cadeia loginCorreto = "adm", senhaCorreta = "adm"
+	cadeia escolhaMenu = "0"
+	cadeia produtos[999], classificacao[999]
+	inteiro contador = -1
+	inteiro indice = 0, testeIndice
+	cadeia testeProduto = "", testeClassificacao = "", teclaEnter = "", resposta = "", resposta1 = ""
+	cadeia texto
+	
+	funcao login () 
+	{
+		cadeia usuario_login, usuario_senha
+		
+		escreva("Informe o login: ")
+		leia(usuario_login)
+
+		escreva("Informe a senha: ")
+		leia(usuario_senha)
+
+		se (usuario_login == loginCorreto e usuario_senha == senhaCorreta) {
+		
+		escreva("\nLogin inserido com sucesso!\n")
+		}
+		
+		se (usuario_login != loginCorreto ou usuario_senha != senhaCorreta) {
+
+			escreva("Login ou senha incorretos... Encerrando")
+			encerrar ()
+		}	
+	}
+	
+	funcao inicio()
+	{
+		login ()
+
+		enquanto (resposta != "9") {
+
+			
+			u.aguarde(2000)
+			limpa()
+
+			menu()
+			leia(escolhaMenu)
+
+			se (escolhaMenu == "1") {
+
+				inserir()
+			
+			} senao se (escolhaMenu == "2") {
+
+				atualizar()
+			
+			} senao se (escolhaMenu == "3") {
+
+				excluir()
+			
+			} senao se (escolhaMenu == "4") {
+
+				imprimir()
+			
+			} senao se (escolhaMenu == "5") {
+				
+				ordemIndice()
+
+			}senao se (escolhaMenu == "6") {	
+			
+				exibirPorClassificacao() 
+			
+			
+			} senao se (escolhaMenu == "9") {
+				
+				encerrar()
+			
+			} senao se (escolhaMenu == "") { 
+			
+				escreva("Opcao invalida")
+			
+			}senao {
+
+				escreva("Opcao invalida")
+				u.aguarde(3000)
+	        		limpa()
+			}
+		}
+
+		escreva("\nObrigado pela preferencia!\n")
+			
+	}
+
+	funcao menu() {
+
+		escreva("MENU\n")
+		
+		escreva("1 - Inserir\n")
+		escreva("2 - Atualizar\n")
+		escreva("3 - Excluir\n")
+		escreva("4 - Exibir todos os produtos\n")
+		escreva("5 - Exibir produto por ordem\n")
+		escreva("6 - Exibir produto por classificação\n")
+		escreva("7 - Adicionar estoque\n")
+		escreva("8 - Remover estoque\n")
+		escreva("9 - Encerrar programa\n")
+		escreva("O que deseja fazer? ")
+			
+	}
+
+	funcao inserir() {
+
+		contador++
+																
+		faca {
+		
+			escreva("\nInsira um produto: ")
+			leia(testeProduto)
+			
+			se (testeProduto == "") {
+
+				escreva("Descrição Inválida") 
+				
+			}
+	
+		} enquanto (testeProduto == "")
+
+		escreva ("\nProduto inserido com sucesso!\n")
+
+		faca {
+
+			escreva("Insira uma classificacao: ")
+			escreva("\n(A - primeira linha)")
+			escreva("\n(B - linha regular)")
+			escreva("\n(C - segunda linha)\n")
+			leia(testeClassificacao)
+
+			testeClassificacao = tx.caixa_alta(testeClassificacao)
+			
+		} enquanto (testeClassificacao != "A" e testeClassificacao != "B" e testeClassificacao != "C")
+
+		produtos[contador] = testeProduto
+		classificacao[contador] = testeClassificacao
+		
+	}
+
+	funcao atualizar() {
+
+		faca {
+
+			escreva("\nQual indice deseja atualizar? ")
+			leia(texto)
+	
+			
+		se (texto == "") {
+
+			escreva("Indice Inválido")
+
+			retorne
+			
+		}
+		
+		indice = tp.cadeia_para_inteiro(texto, 10)
+			
+		
+			se (indice < 0 ou indice > contador) {
+
+				escreva("Indice Invalido")
+				u.aguarde (1500)
+				retorne
+			}
+		
+		} enquanto (indice < 0 ou indice > contador)
+
+		escreva(produtos[indice] + " (indice " + indice + ") = ")
+		leia(produtos[indice])
+		escreva ("\nAtualizado com sucesso!\n")
+		
+	}
+
+	funcao imprimir() {
+
+		se (resposta1 == "D" ou resposta1 == "d") {
+
+			para (inteiro i = contador; i >= 0; i--) {
+
+				se (produtos[i] == "") {
+	
+				} senao {
+
+					escreva("Produto: " + produtos[i] + ", indice " + i + "\nClassificacao: " + classificacao[i] + "\n\n")
+					
+				}
+				
+			}
+
+			enter()
+
+		} senao {
+			
+			para (inteiro i = 0; i <= contador; i++) {
+
+				se (produtos[i] == "") {
+	
+				} senao {
+
+					escreva("Produto: " + produtos[i] + ", indice " + i + "\nClassificacao: " + classificacao[i] + "\n\n")
+					
+				}
+				
+			}
+
+		enter()
+				
+		}
+	}
+	
+	funcao ordemIndice() {
+
+		escreva("Deseja exibir os indices de forma crescente ou decrescente? (C/D) ")
+		leia(resposta1)
+
+		imprimir()
+
+	}
+
+	funcao excluir() {
+		
+		escreva("Qual indice voce quer excluir? ")
+		leia(texto)
+
+		se (texto == "") {
+
+			escreva("Indice Inválido")
+
+			retorne
+			
+		}
+		
+		indice = tp.cadeia_para_inteiro(texto, 10)
+
+		se (produtos[indice] == "") {
+
+			escreva("Indice Inválido")
+			
+		} senao {
+
+			produtos[indice] = ""
+
+			classificacao[indice] = ""
+
+			escreva ("\nProduto excluido com sucesso!\n")
+		
+		}
+	}
+
+	funcao encerrar() {
+
+		resposta = "9"
+		
+	}
+	funcao exibirPorClassificacao() 
+	{
+		cadeia entradaClassificacao
+		inteiro encontrados = 0
+		
+		escreva ("\n\nDigite a classificação desejada: ")
+		leia(entradaClassificacao)
+
+		entradaClassificacao = tx.caixa_alta(entradaClassificacao)
+
+		escreva ("\nProdutos com a classificação " + entradaClassificacao + "\n\n")
+
+		para (inteiro i = 0; i <= contador; i++) {
+
+			se (classificacao [i] == entradaClassificacao) {
+
+				escreva ("Produto: " + produtos [i] + ", indice " + i + "\nClassificação " + classificacao [i] + "\n\n")
+				encontrados = 1	
+			}
+		}
+		se (encontrados == 0) {
+
+			escreva ("Nenhum produto encontrado na classificação " + entradaClassificacao + "\n\n")	
+		}
+			escreva ("Precione enter para voltar ao menu: ")
+			leia (teclaEnter)
+		
+	}
+
+	funcao enter() {
+
+		escreva ("Precione enter para voltar ao menu: ")
+		leia(teclaEnter)
+		
+	}
+	
+}
